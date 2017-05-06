@@ -11,7 +11,5 @@
     <masterLabel>ELTOROCars</masterLabel>
     <requireHttps>false</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
-    <siteAdmin>admin@00.eltorocars.com</siteAdmin>
     <siteType>Visualforce</siteType>
-    <subdomain>eltorocars00-developer-edition</subdomain>
 </CustomSite>
