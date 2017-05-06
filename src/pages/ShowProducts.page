@@ -1,0 +1,47 @@
+<apex:page controller="ShowProducts" action="{!fetchProducts}">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Years" />
+                <apex:outputText value="{!Years}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Makes" />
+                <apex:outputText value="{!Makes}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Families" />
+                <apex:outputText value="{!Families}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Passengers" />
+                <apex:outputText value="{!Passengers}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!UpdateCars}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!Products}" var="p">
+                <apex:column headerValue="Product">
+                    <a href="/{!p.p2.Id}" target="_blank">{!p.p2.Name}</a>
+                </apex:column>
+                <apex:column headerValue="Vehicle">
+                    {!p.p2.Year__c} * {!p.p2.Make__c} * {!p.p2.Model__c}
+                </apex:column>
+                <apex:column value="{!p.p2.Family}" />
+                <apex:column value="{!p.p2.Passengers__c}" />
+                <apex:column value="{!p.p2.ReviewURL__c}" />
+                <apex:column value="{!p.p2.PriceBookEntries[0].UnitPrice}" />
+                <apex:column headerValue="Local Image">
+                    <apex:image value="{!p.p2.ServerURL__c}/servlet/servlet.ImageServer?id={!p.p2.LocalImage__c}&oid={!$Organization.Id}"/>
+                </apex:column>
+                <apex:column headerValue="Review Image">
+                    <apex:image value="{!p.p2.ReviewImageURL__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
