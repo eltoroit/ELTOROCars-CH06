@@ -9,7 +9,7 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>Website</members>
+        <members>*</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -22,7 +22,7 @@
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>RemoteOrgImage</members>
+        <members>*</members>
         <name>RemoteSiteSetting</name>
     </types>
     <types>
@@ -39,7 +39,7 @@
         <name>Document</name>
     </types>
     <types>
-		<members>CarsData</members>
+		<members>*</members>
 		<name>NamedCredential</name>
 	</types>
     <version>38.0</version>
