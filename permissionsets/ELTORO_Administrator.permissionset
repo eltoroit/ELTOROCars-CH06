@@ -136,11 +136,11 @@
     </pageAccesses>
     <tabSettings>
         <tab>Data_Migration</tab>
-        <visibility>None</visibility>
+        <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
         <tab>View_Products</tab>
-        <visibility>None</visibility>
+        <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
         <tab>standard-Pricebook2</tab>
