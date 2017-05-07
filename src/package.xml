@@ -39,8 +39,8 @@
         <name>Document</name>
     </types>
     <types>
-			<members>CarsData</members>
-			<name>NamedCredential</name>
-		</types>
+		<members>CarsData</members>
+		<name>NamedCredential</name>
+	</types>
     <version>38.0</version>
 </Package>
