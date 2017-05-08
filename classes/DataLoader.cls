@@ -15,8 +15,27 @@ public class DataLoader {
         dl.deleteOriginalRecords();
         
         // Create Data
-        Folder f = dl.findFolder();
-        Pricebook2 pb2 = dl.findPricebook();
+        dl.createData(cars);
+        
+        // Assign Permission sets
+        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator '];
+        try {
+            PermissionSetAssignment psa = new PermissionSetAssignment(
+                PermissionSetId = ps.Id, 
+                AssigneeId = UserInfo.getUserId());
+            insert psa;    
+        } catch (DmlException ex) {
+            if (ex.getDmlType(0) == System.StatusCode.DUPLICATE_VALUE) {
+                // Do not worry about this...
+            } else {
+                throw ex;
+            }
+        }
+    }
+    
+    private void createData(List<Car> cars) {
+        Folder f = findFolder();
+        Pricebook2 pb2 = findPricebook();
         List<Document> ds = new List<Document>();
         List<Product2> p2s = new List<Product2>();
         List<PricebookEntry> pbes = new List<PricebookEntry>();
@@ -26,20 +45,17 @@ public class DataLoader {
             p2s.add(c.createProduct());
         }
         insert p2s;
-        
         for (Car c : cars) {
             ds.add(c.createDocument());
             pbes.add(c.createPricebookEntry());
         }
         insert ds;
         insert pbes;
-        
         for (Car c : cars) {
             c.updateProduct();
         }
         update p2s;
     }
-    
     private String findCarsJson() {
         HTTP h = new HTTP();
         HttpRequest req = new HttpRequest();
@@ -105,7 +121,7 @@ public class DataLoader {
         public String RemoteOrgImageUrl { get; set; }
         public String ReviewImageUrl { get; set; }
         
-		// sObjects
+        // sObjects
         public Folder f { get; set; }
         public Product2 p2 { get; set; }
         public Document doc { get; set; }
@@ -114,7 +130,7 @@ public class DataLoader {
         
         public void findDocument() {
             doc = new Document();
-        
+            
             HTTP h = new HTTP();
             HttpRequest req = new HttpRequest();
             req.setEndpoint('callout:CarsData/' + RemoteOrgImageUrl);
