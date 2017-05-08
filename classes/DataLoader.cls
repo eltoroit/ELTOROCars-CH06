@@ -23,7 +23,7 @@ public class DataLoader {
     
     @future
     public static void assignPermissionSet() {
-        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator '];
+        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator'];
         try {
             PermissionSetAssignment psa = new PermissionSetAssignment(
                 PermissionSetId = ps.Id, 
