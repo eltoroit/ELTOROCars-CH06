@@ -127,10 +127,6 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>JsonProducts</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>ShowProducts</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
