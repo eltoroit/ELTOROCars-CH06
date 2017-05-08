@@ -18,7 +18,7 @@ public class DataLoader {
         dl.createData(cars);
         
         // Assign Permission sets
-        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator '];
+        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator'];
         try {
             PermissionSetAssignment psa = new PermissionSetAssignment(
                 PermissionSetId = ps.Id, 
