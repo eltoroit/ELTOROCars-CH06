@@ -18,7 +18,12 @@ public class DataLoader {
         dl.createData(cars);
         
         // Assign Permission sets
-        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator'];
+        assignPermissionSet();
+    }
+    
+    @future
+    public static void assignPermissionSet() {
+        PermissionSet ps = [SELECT ID FROM PermissionSet WHERE name = 'ELTORO_Administrator '];
         try {
             PermissionSetAssignment psa = new PermissionSetAssignment(
                 PermissionSetId = ps.Id, 
@@ -32,7 +37,6 @@ public class DataLoader {
             }
         }
     }
-    
     private void createData(List<Car> cars) {
         Folder f = findFolder();
         Pricebook2 pb2 = findPricebook();
