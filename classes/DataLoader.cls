@@ -1,5 +1,5 @@
 public class DataLoader {
-    public static void LoadData() {
+    public static void process() {
         DataLoader dl = new DataLoader();
         
         // Web service calls
