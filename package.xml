@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>DataLoader</members>
+        <members>ShowProducts</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>JsonProducts</members>
+        <members>ShowProducts</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -18,19 +20,12 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
+        <members>ELTORO_Administrator</members>
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>*</members>
-        <name>RemoteSiteSetting</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomSite</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>Data_Migration</members>
+        <members>View_Products</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -39,7 +34,7 @@
         <name>Document</name>
     </types>
     <types>
-		<members>*</members>
+		<members>CarsData</members>
 		<name>NamedCredential</name>
 	</types>
     <version>38.0</version>
