@@ -6,7 +6,6 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>JsonProducts</members>
         <members>ShowProducts</members>
         <name>ApexPage</name>
     </types>
@@ -24,7 +23,6 @@
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>Data_Migration</members>
         <members>View_Products</members>
         <name>CustomTab</name>
     </types>

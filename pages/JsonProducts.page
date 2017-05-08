@@ -1,3 +1,0 @@
-<apex:page applyHtmlTag="false" applyBodyTag="false" showHeader="false"
-           contentType="txt/txt#json.txt" controller="ShowProducts"
-           action="{!fetchProducts}">{!jsonCarsList}</apex:page>

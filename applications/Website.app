@@ -6,5 +6,4 @@
     <tab>standard-Pricebook2</tab>
     <tab>standard-Product2</tab>
     <tab>View_Products</tab>
-    <tab>Data_Migration</tab>
 </CustomApplication>

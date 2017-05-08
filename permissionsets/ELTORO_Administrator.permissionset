@@ -135,10 +135,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <tabSettings>
-        <tab>Data_Migration</tab>
-        <visibility>Visible</visibility>
-    </tabSettings>
-    <tabSettings>
         <tab>View_Products</tab>
         <visibility>Visible</visibility>
     </tabSettings>
